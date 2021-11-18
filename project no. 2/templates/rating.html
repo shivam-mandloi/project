@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='rating.css') }}">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav1">
+            <a href="/">
+                <li>Home</li>
+            </a>
+            <a href="/email">
+                <li>Import</li>
+            </a>
+            <a href="/book">
+                <li>Book</li>
+            </a>
+        </div>
+        <div class="circle">
+            <img src="{{ url_for('static',filename='Nerd-alert-logo.png') }}" alt="">
+        </div>
+    </div>
+
+    <div class="cont">
+        <div class="left">
+            <img src="{{ url_for('static',filename= data[0][4]) }}" alt="">
+            <div class="name">
+                <h1>Name:-</h1>
+                <p>{{ data[0][1] }}</p>
+            </div>
+            <div class="name">
+                <h1>Writer:-</h1>
+                <p>{{ data[0][2] }}</p>
+            </div>
+            <div class="name">
+                <h1>rating:-</h1>
+                <p>{{ data[0][3] }}</p>
+            </div>
+            <a href="/email/rate/{{data[0][5]}}">Rate</a>
+        </div>
+
+        <div class="right">
+            {% for item in data1 %}
+
+            <div class="coment">
+                <div class="img-h2">
+                    <img src="{{ url_for('static',filename ='login.png') }}" alt="">
+                    <h2>{{item[1]}}</h2>
+                </div>
+                <li>{{item[3]}}</li>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

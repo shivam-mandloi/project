@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='import.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="nav1">
+            <a href="/">
+                <li>Home</li>
+            </a>
+            <a href="/email">
+                <li>Import</li>
+            </a>
+            <a href="/book">
+                <li>Book</li>
+            </a>
+        </div>
+        <div class="circle">
+            <img src="{{ url_for('static',filename='Nerd-alert-logo.png') }}" alt="">
+        </div>
+    </div>
+
+    <form action="" class="form">
+        <div class="box">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Book Name">
+            <input type="text" placeholder="Writer of book">
+            <div class="first">
+                <li class="list">Book Image:-</li>
+                <label class="file-uplode">
+                    <input type="file">
+                    <li>Import File</li>
+                </label>
+            </div>
+
+            <button type="submit" id="btn">submit</button>
+            
+        </div>
+    </form>
+</body>
+
+</html>

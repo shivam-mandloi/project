@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<!-- Page Header -->
+
+<header class="masthead" style="background-image: url(  {{ url_for('static', filename='') }}  )">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Form</h1>
+          <span class="subheading">your data is totally secure ,you can trust on us.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>Please tell us about your subject name (Name of subject which you want to add) and qoutes if you want and image this is also optional</p>
+        <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+        <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+        <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+        <form name="sentMessage" id="contactForm" novalidate method="POST" method="POST" action="/subjectinfo/{{user}}/{{slug}}/notes" enctype="multipart/form-data">
+          
+          <label class="form-label" for="customFile">Notes</label>
+          <input type="file" class="form-control" id="customFile" name="file"/>
+
+
+          <br>
+
+          <div id="success"></div>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  {% endblock %}

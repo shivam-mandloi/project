@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='book.css') }}">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav1">
+            <a href="/">
+                <li>Home</li>
+            </a>
+            <a href="/email">
+                <li>Import</li>
+            </a>
+            <a href="/book">
+                <li>Book</li>
+            </a>
+        </div>
+        <div class="circle">
+            <img src="{{ url_for('static',filename='Nerd-alert-logo.png') }}" alt="">
+        </div>
+    </div>
+    <div class="conta">
+        <div class="first">
+            {% for item in data %}
+            <div class="box">
+                <img src="{{ url_for('static',filename = item[2]) }}" alt="">
+                <h2>{{item[1]}}</h2>
+                <a href="/rating/{{item[3]}}">Visit</a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</body>
+
+</html>

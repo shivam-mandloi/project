@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+    <form action="/" method="POST">
+        <div class="cont">
+
+            <div class="box">
+                <input type="text" name="search" id="search" placeholder="search">
+                <button type="submit">search</button>
+            </div>
+
+            {% if a == 0 %}
+                <a href="/add">Add</a>
+            {% endif %}
+
+            {% if a == 1 %}
+                {% for data in li %}
+                    <div class="men">
+                        <h2>{{data[1]}}</h2>
+                        <li>{{data[2]}}</li>
+                    </div>    
+                {% endfor %}
+            {% endif %}
+        </div>
+    </form>
+</body>
+</html>

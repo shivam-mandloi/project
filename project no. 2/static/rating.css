@@ -1,0 +1,122 @@
+body{
+    background: url('backgroun-first.jpg') no-repeat center center/cover;
+}
+.nav{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.nav1{
+    border-bottom: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    background-color: rgba(9, 9, 10, 0.8);
+    border-radius: 10px;
+    opacity: .6;
+    z-index: 1;
+}
+.nav li{
+    color: white;
+    list-style: none;
+    font-size: 20px;
+}
+.nav a{
+    text-decoration: none;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.circle{
+    border: 2px solid white;
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    border-radius: 0 0 100% 100%;
+    position: relative;
+    bottom: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle img{
+    width: 30px;
+    height: 30px;
+}
+.cont{
+    display: grid;
+    grid-template-columns: 500px auto;
+    color: white;
+}
+.cont a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+.cont a:hover{
+    color: black;
+    background-color: white;
+}
+.left{
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-radius: 10px;
+    margin-right: 4px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 5px;
+}
+.right{
+    border: 3px solid white;
+    margin-left: 10px;
+    border-radius: 15px;
+}
+.name{
+    display: flex;
+}
+.left img{
+    margin-top: 15px;
+    border-radius: 30px;
+    width: 300px;
+    height: 350px;
+}
+.name p{
+    position: relative;
+    left: 15px;
+    top: 10px;
+    font-size: 20px;
+}
+.coment{
+    border-bottom: 5px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+}
+.coment li{
+    list-style: none;
+    font-size: 20px;
+}
+.coment img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 17px;
+    margin-right: 20px;
+}
+.img-h2{
+    display: flex;
+}

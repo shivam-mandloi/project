@@ -1,0 +1,65 @@
+body{
+    background: url('backgroun-first.jpg') no-repeat center center/cover;
+    font-family: 'Ubuntu', sans-serif;
+}
+.top{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.top h1{
+    border-bottom: 4px solid white;
+    color: white;
+}
+.top p{
+    color: white;
+}
+.inputs{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputs input{
+    margin: 20px;
+}
+#email{
+    background: none;
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+}
+#email:hover{
+    background: none;
+    outline: none;
+}
+input ,select,textarea{
+    font: bold;
+    font-size: 15px;
+    color: white;
+}
+.inputs button{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    width: 90px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 100px;
+    top: 20px;
+}
+.inputs button:hover{
+    background-color: white;
+    color: black;
+}

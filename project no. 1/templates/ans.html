@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+{% block body %}
+  
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename='quion.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h3>{{data.question}}</h3>
+            <span class="subheading">by:-{{data.name}}</span>
+            <span class="subheading">username:-{{data.username}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+  
+
+        
+        <div class="post-preview">
+          {% for item in data1 %}
+            <h2 class="post-title">
+              name:-{{item.name}}
+            </h2>
+            <h2 class="post-subtitle">
+              username:-{{item.username}}
+            </h2>
+            <p>{{item.answer}}</p>
+          </a>
+          <hr>
+          {% endfor %}
+          <h2>You can give your opinion by filling this form.</h2>
+
+        {% if a == 1 %}
+      <div class="alert alert-primary" role="alert">
+        {{msg}}
+      </div>
+      {% endif %}
+      <form name="sentMessage" id="contactForm" novalidate method="POST" action="/submitAns/{{data.slug}}">
+        <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>username</label>
+          <input type="text" class="form-control" placeholder="username" id="user" name="user" required data-validation-required-message="Please enter username.">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+
+      <div class="control-group"></div>
+      <div class="form-group floating-label-form-group controls">
+        <label>password</label>
+        <input type="password" class="form-control" placeholder="password" id="password" name="pas" required data-validation-required-message="Please enter password.">
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+
+
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Answer</label>
+            <textarea rows="5" class="form-control" placeholder="Answer" id="ans" name="ans" required data-validation-required-message="Please enter a Answer."></textarea>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+        
+      </form>
+      </div>
+      
+        <!-- Pager -->
+        <div class="clearfix">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  {% endblock %}

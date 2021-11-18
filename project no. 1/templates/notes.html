@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+  
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename=img) }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>{{subject}}  ({{why}})</h1>
+            <span class="subheading">you can download notes from here.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        {% for item in data1 %}
+
+        <div class="post-preview">
+            <h2 class="post-title">
+              by:-{{item.by}}
+            </h2>
+            <a href="/store/{{item.slug}}"><button class="btn btn-primary">Download</button></a>
+          </a>
+        </div>
+        <hr>
+
+        {% endfor %}
+        
+
+        <!-- Pager -->
+        <div class="clearfix">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  {% endblock %}

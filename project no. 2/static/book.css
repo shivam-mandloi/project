@@ -1,0 +1,93 @@
+body{
+    background: url('backgroun-first.jpg') no-repeat center center/cover;
+}
+.nav{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.nav1{
+    border-bottom: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    background-color: rgba(9, 9, 10, 0.8);
+    border-radius: 10px;
+    opacity: .6;
+    z-index: 1;
+}
+.nav li{
+    color: white;
+    list-style: none;
+    font-size: 20px;
+}
+.nav a{
+    text-decoration: none;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.circle{
+    border: 2px solid white;
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    border-radius: 0 0 100% 100%;
+    position: relative;
+    bottom: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle img{
+    width: 30px;
+    height: 30px;
+}
+.conta{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.first{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.box{
+    border: 2px solid white;
+    border-radius: 8%;
+    width: 300px;
+    height: 370px;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.box img{
+    border-radius: 8%;
+    border-bottom: 2px solid white;
+    width: 300px;
+    height: 250px;
+}
+.box h2{
+    color: white;
+    text-align: center;
+}
+.box a{
+    color: white;
+    border-radius: 10%;
+    text-decoration: none;
+    border: 2px solid white;
+    width: 90px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box a:hover{
+    background-color: white;
+    color: black;
+}
